@@ -1,0 +1,17 @@
+- name: "var prompt"
+  hosts: local
+  connection: local
+  vars_promt:
+    - name: "FULLNAME"
+      prompt: "what is your FULLNAME"
+      private: false
+    - name: "AGE"
+      prompt: "what is your AGE"
+      private: false
+    - name: "WORK"
+      prompt: "what is your WORK"
+      private: true
+  tasks:
+    - name: "print the person info"
+      ansible.builtin.debug:
+        msg: " Hi, this is {{FULLNAME}}, and age is {{AGE}} and working as {{WORK}}"
