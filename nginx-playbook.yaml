@@ -1,5 +1,6 @@
 - name: "Nginx install play book"
   hosts: backend
+  become: yes
   tasks:
     - name: "install nginx"
       dnf:
