@@ -1,0 +1,13 @@
+- name: vars-practice
+  hosts: local
+  connection: local
+  vars:
+    FULLNAME: nagesh
+    AGE: 27
+    WORK: Engineer
+  tasks:
+    - name: "print the person info"
+      vars:
+        AGE: 28
+      ansible.builtin.debug:
+        msg: " Hi, this is {{FULLNAME}}, and age is {{AGE}} and working as {{WORK}}"
