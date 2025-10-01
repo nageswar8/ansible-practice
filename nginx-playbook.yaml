@@ -1,0 +1,13 @@
+- name: "Nginx install play book"
+  hosts: backend
+  tasks:
+    - name: "install nginx"
+      dnf:
+        name: nginx
+        state: present
+
+    - name: "check service started"
+      service:
+        name: nginx
+        state: started
+        enabled: yes
