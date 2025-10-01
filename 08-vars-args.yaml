@@ -5,3 +5,10 @@
     - name: "print the cource info"
       ansible.builtin.debug:
         msg: " Hi, this is {{FULLNAME}}, and age is {{AGE}} and working as {{WORK}}"
+# vars preferences
+# 1. args or command line
+# 2. from task
+# 3. files
+# 4. prompt
+# 5. play level
+# 6. inventory
