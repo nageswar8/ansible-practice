@@ -1,0 +1,11 @@
+- name: user add
+  hosts: local
+  connection: local
+  tasks:
+  - name: add user
+    ansible.builtin.command: useradd roboshop
+    register: added
+  
+  - name: print the user
+    ansible.builtin.debug:
+      msg: "{{ added }}"
