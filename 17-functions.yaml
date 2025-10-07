@@ -33,4 +33,4 @@
     - name: print the root data
       ansible.builtin.debug:
         msg: "{{ out }}"
-  become: yes
+  # become: yes
