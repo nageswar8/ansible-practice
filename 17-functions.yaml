@@ -26,3 +26,10 @@
     - name: check ipv4
       ansible.builtin.debug:
         msg: "{{ ipv4_invalid | ansible.utils.ipv4 }}"
+
+    - name: grep for root
+      ansible.builtin.shell: cat /etc/passwd | grep -i root
+      register: out
+    - name: print the root data
+      ansible.builtin.debug:
+        msg: { { out } }
