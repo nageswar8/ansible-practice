@@ -37,6 +37,7 @@
     - name: redirect output through command
       ansible.builtin.command: ls -ltr > /tmp/out.txt
       register: data
+      ignore_errors: true
 
     - name: print the routed data
       ansible.builtin.debug:
