@@ -9,4 +9,4 @@
 
     - name: print the user
       ansible.builtin.debug:
-        msg: "{{ added }}"
+        msg: "{{ added | to_nice_json }}"
