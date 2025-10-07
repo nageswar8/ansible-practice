@@ -1,0 +1,8 @@
+- name: function testiing
+  hosts: local
+  connection: local
+
+  tasks:
+  - name: default vars
+    ansible.builtin.debug:
+      msg: "{{fullname}}"
