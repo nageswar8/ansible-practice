@@ -34,8 +34,16 @@
       ansible.builtin.debug:
         msg: "{{ out }}"
 
-    - name: redirect output
+    - name: redirect output through command
       ansible.builtin.command: ls -ltr > /tmp/out.txt
+      register: data
+
+    - name: print the routed data
+      ansible.builtin.debug:
+        msg: "{{ data }}"
+
+    - name: redirect output through shell
+      ansible.builtin.shell: ls -ltr > /tmp/out.txt
       register: data
 
     - name: print the routed data
