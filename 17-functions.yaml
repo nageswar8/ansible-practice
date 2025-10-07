@@ -3,8 +3,12 @@
   connection: local
   vars:
     fullname: "Pulikanti Nageswarreddy"
+    devtools: java, python, c, c++
 
   tasks:
     - name: default vars
       ansible.builtin.debug:
         msg: "{{fullname | default('Nageswarreddy')}}"
+    - name: convert string to lists
+      ansible.builtin.debug:
+        msg: "{{ devtools | split(',') }}"
