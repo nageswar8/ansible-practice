@@ -3,6 +3,6 @@
   connection: local
 
   tasks:
-  - name: default vars
-    ansible.builtin.debug:
-      msg: "{{fullname}}"
+    - name: default vars
+      ansible.builtin.debug:
+        msg: "{{fullname | default(Nageswarreddy)}}"
