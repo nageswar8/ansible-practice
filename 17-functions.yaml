@@ -4,7 +4,8 @@
   vars:
     fullname: "Pulikanti Nageswarreddy"
     devtools: java, python, c, c++
-    ipv4: 192.168.0.1k
+    ipv4_invalid: 192.168.0.1k
+    ipv4: 192.168.0.1
 
   tasks:
     - name: default vars
@@ -22,3 +23,6 @@
     - name: check ipv4
       ansible.builtin.debug:
         msg: "{{ ipv4 | ansible.utils.ipv4 }}"
+    - name: check ipv4
+      ansible.builtin.debug:
+        msg: "{{ ipv4_invalid | ansible.utils.ipv4 }}"
