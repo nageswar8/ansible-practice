@@ -1,6 +1,8 @@
 - name: function testiing
   hosts: local
   connection: local
+  vars:
+    fullname: "Pulikanti Nageswarreddy"
 
   tasks:
     - name: default vars
