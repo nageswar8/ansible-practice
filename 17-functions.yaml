@@ -32,5 +32,5 @@
       register: out
     - name: print the root data
       ansible.builtin.debug:
-        msg: "{ { out } }"
+        msg: "{{ out }}"
   become: yes
