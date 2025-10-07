@@ -4,6 +4,7 @@
   vars:
     fullname: "Pulikanti Nageswarreddy"
     devtools: java, python, c, c++
+    ipv4: 192.168.0.1
 
   tasks:
     - name: default vars
@@ -12,3 +13,12 @@
     - name: convert string to lists
       ansible.builtin.debug:
         msg: "{{ devtools | split(',') }}"
+    - name: convert to lower
+      ansible.builtin.debug:
+        msg: "{{ fullname | lower }}"
+    - name: convert to upper
+      ansible.builtin.debug:
+        msg: "{{ fullname | upper }}"
+    - name: check ipv4
+      ansible.builtin.debug:
+        msg: "{{ ipv4 | ansible.utils.ipv4 }}"
