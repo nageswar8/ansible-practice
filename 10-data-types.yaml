@@ -1,0 +1,9 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+    FULLNAME: NAGESWAR
+    AGE: 27
+    IS_GOOD: true
+    tools:
+      - java
